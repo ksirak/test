@@ -1,3 +1,4 @@
+//Sirak Kaewjamnong
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ public class Quiz2 {
         ArrayList oddList = new ArrayList<Fac>();
         ArrayList evenList = new ArrayList<Fac>();
         ArrayList equalList = new ArrayList<Fac>();
-        
+
     class Fac{
         int value;
         ArrayList facList = new ArrayList<Integer>();
@@ -21,7 +22,7 @@ public class Quiz2 {
         void showList(){
             for(int i=0; i<facList.size();i++){
              System.out.print(facList.get(i)+" ");
-            } 
+            }
             System.out.println();
         }
     }
@@ -31,13 +32,13 @@ public class Quiz2 {
                 // TODO code application logic here
         Quiz2 q2 = new Quiz2();
   //      System.out.println("Start Program");
-                       
+
         Scanner keyboard = new Scanner(System.in);
         for(int i=0; i<10000;i++){
            q2.input[i] = keyboard.nextInt();
            if(q2.input[i]<=0){
                break;
-           }          
+           }
         }// end for
         System.out.println();
         q2.start();
@@ -46,8 +47,8 @@ public class Quiz2 {
         q2.printEven();
         q2.printEqual();
     }
-        
-    public void start(){    
+
+    public void start(){
          for(int i=0; input[i]>0;i++){
              Fac fac = new Fac();
              fac.value = input[i];
@@ -58,11 +59,11 @@ public class Quiz2 {
                      fac.facList.add(j);
                      if(j%2 == 0){
                          even++;
-                     }else{ 
+                     }else{
                          odd++;
                      }
                  //System.out.print(j+" ");
-                }                                                                  
+                }
              }// end for
                 if(input[i]==2){
                     prime++;
@@ -71,7 +72,7 @@ public class Quiz2 {
                      prime++;
                      primeList.add(fac);
                  }else if(odd>even){
-                     moreOdd++;  
+                     moreOdd++;
                      oddList.add(fac);
                  }else if(even>odd){
                      moreEven++;
@@ -80,12 +81,12 @@ public class Quiz2 {
                      equal++;
                      equalList.add(fac);
                  }
-         
-            //System.out.println(" o = "+odd+" e = "+even);  
+
+            //System.out.println(" o = "+odd+" e = "+even);
          }
         System.out.println("prime = "+prime+" more odd = "+moreOdd+" more even = "
                 +moreEven+" equal = "+equal);
-       
+
     }
     public void printPrime(){
         System.out.println("##########");
@@ -104,7 +105,7 @@ public class Quiz2 {
         }
     }
     public void printEven(){
-        System.out.println("##########"); 
+        System.out.println("##########");
         for (int i = 0; i < evenList.size(); i++) {
 	    Fac fac = (Fac)evenList.get(i);
 	    fac.showValue();
@@ -119,5 +120,5 @@ public class Quiz2 {
             fac.showList();
         }
     }
-    
-}
+
+}// finish
