@@ -1,4 +1,13 @@
 ﻿test ทดสอบ
 
+<<<<<<< HEAD
 ทอลองทำงานว่าอยู่ในอีก branch
+=======
+
+
+ทดสอบ github1
+
+ทดสอบ github2
+ทดสอบ github3
+>>>>>>> parent of efbdd46... 2
 
